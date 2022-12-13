@@ -3,7 +3,6 @@ import Image from "next/image";
 
 const ProductComponent = ({ product }) => {
   const { title, price, image } = product.attributes;
-  console.log(image);
   return (
     <div>
       <div>

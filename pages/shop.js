@@ -14,8 +14,8 @@ const Shop = () => {
   return (
     <div>
       <h1>SHOP</h1>
-      {products.map((product) => (
-        <ProductComponent product={product} />
+      {products.map((product, index) => (
+        <ProductComponent key={product.attributes.slug} product={product} />
       ))}
     </div>
   );
