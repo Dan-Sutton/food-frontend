@@ -1,12 +1,15 @@
 import React from "react";
 import Image from "next/image";
+import styles from "../styles/product.module.css";
 
 const ProductComponent = ({ product }) => {
   const { title, price, image } = product.attributes;
+
   return (
     <div>
       <div>
         <Image
+          className={styles.image}
           src={image.data.attributes.url}
           alt="product"
           width={100}
