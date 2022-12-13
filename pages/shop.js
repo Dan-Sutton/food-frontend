@@ -1,5 +1,7 @@
 import React from "react";
 import { useQuery } from "urql";
+import ProductComponent from "../components/product";
+import Product from "../components/product";
 import { PRODUCT_QUERY } from "../lib/query";
 
 const Shop = () => {
@@ -13,7 +15,7 @@ const Shop = () => {
     <div>
       <h1>SHOP</h1>
       {products.map((product) => (
-        <h2>{product.attributes.title}</h2>
+        <ProductComponent product={product} />
       ))}
     </div>
   );
