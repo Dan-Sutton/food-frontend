@@ -1,8 +1,5 @@
 import Head from "next/head";
-import Nav from "../components/nav";
-import styles from "../styles/Home.module.css";
-import logo from "../public/alchemylogo.png";
-import Image from "next/image";
+import Navbar from "../components/navbar";
 
 export default function Home() {
   return (
@@ -13,12 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className={styles.titlediv}>
-          <h1 className={styles.title}>THE FOOD ALCHEMIST</h1>
-          <Image className={styles.logo} src={logo} alt="alchemylogo" />
-        </div>
-
-        <Nav />
+        <Navbar />
       </main>
     </div>
   );

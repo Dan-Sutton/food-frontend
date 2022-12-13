@@ -4,6 +4,7 @@ import ProductComponent from "../components/product";
 import Product from "../components/product";
 import { PRODUCT_QUERY } from "../lib/query";
 import styles from "../styles/shop.module.css";
+import Navbar from "../components/navbar";
 
 const Shop = () => {
   const [results] = useQuery({ query: PRODUCT_QUERY });
@@ -14,7 +15,8 @@ const Shop = () => {
   const products = data.products.data;
   return (
     <div className={styles.shop}>
-      <h1>SHOP</h1>
+      <Navbar />
+      {/* <h1>SHOP</h1> */}
       <div className={styles.products}>
         {products.map((product, index) => (
           <ProductComponent key={product.attributes.slug} product={product} />
