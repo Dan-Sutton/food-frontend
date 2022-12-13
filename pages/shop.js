@@ -8,8 +8,15 @@ const Shop = () => {
 
   if (fetching) return <p>Loading...</p>;
   if (error) return <p>Something went wrong...{error.message}</p>;
-  console.log(data);
-  return <div>Shop</div>;
+  const products = data.products.data;
+  return (
+    <div>
+      <h1>SHOP</h1>
+      {products.map((product) => (
+        <h2>{product.attributes.title}</h2>
+      ))}
+    </div>
+  );
 };
 
 export default Shop;
