@@ -1,0 +1,13 @@
+.shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
