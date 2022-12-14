@@ -16,11 +16,14 @@ const Shop = () => {
   return (
     <div className={styles.shop}>
       <Navbar />
-      {/* <h1>SHOP</h1> */}
-      <div className={styles.products}>
-        {products.map((product, index) => (
-          <ProductComponent key={product.attributes.slug} product={product} />
-        ))}
+
+      <div className={styles.shopcontent}>
+        <h1>Latest products</h1>
+        <div className={styles.products}>
+          {products.map((product, index) => (
+            <ProductComponent key={product.attributes.slug} product={product} />
+          ))}
+        </div>
       </div>
     </div>
   );
