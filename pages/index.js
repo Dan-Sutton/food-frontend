@@ -52,7 +52,8 @@ export default function Home() {
           <div className={styles.reviewCard}>
             <p className={styles.reviewContent}>
               Most amazing food I’ve eaten! Biscoff chicken is something else
-              entirely... I even dream about it HIGHLY RECOMMEND' -2022{" "}
+              entirely... I even dream about it HIGHLY RECOMMEND
+              ⭐️⭐️⭐️⭐️⭐️' -2022{" "}
             </p>
             <div className={styles.reviewAvatar}></div>
           </div>
