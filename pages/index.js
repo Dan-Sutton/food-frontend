@@ -26,7 +26,7 @@ export default function Home() {
             }
           />
         </div>
-
+        <h2 className={styles.subheading}>WHAT WE DO</h2>
         <div className={styles.cardsRow}>
           <div className={styles.cards}>
             <Card
