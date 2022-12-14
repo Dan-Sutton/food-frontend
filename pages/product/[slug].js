@@ -4,6 +4,8 @@ import { useQuery } from "urql";
 import { GET_PRODUCT_QUERY } from "../../lib/query";
 import { useRouter } from "next/router";
 import styles from "../../styles/productPage.module.css";
+import Navbar from "../../components/navbar";
+import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 
 const ProductDetails = () => {
   const { query } = useRouter();
@@ -20,15 +22,32 @@ const ProductDetails = () => {
 
   return (
     <div className={styles.productPage}>
-      <Image width={500} height={500} src={image.data.attributes.url} />
-      <div>
-        <h3>{title}</h3>
-        <p>{description}</p>
+      <Navbar />
+
+      <div className={styles.productContent}>
+        <Image
+          alt="productImage"
+          width={300}
+          height={300}
+          src={image.data.attributes.url}
+        />
+        <div className={styles.descColumn}>
+          <div>
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </div>
+          <div className={styles.quantity}>
+            <span>Quantity:</span>
+
+            <AiFillMinusCircle />
+
+            <p>0</p>
+
+            <AiFillPlusCircle />
+          </div>
+          <button className={styles.cartbutton}>Add to Cart</button>
+        </div>
       </div>
-      <div>
-        <p>QUANTITY</p>
-      </div>
-      <button>Add to Cart</button>
     </div>
   );
 };

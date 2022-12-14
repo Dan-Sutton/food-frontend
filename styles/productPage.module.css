@@ -3,3 +3,39 @@
   flex-direction: column;
   align-items: center;
 }
+
+.productContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10%;
+  /* border: 2px solid black; */
+  border-radius: 6px;
+  padding: 30px;
+  width: 60vw;
+}
+
+.descColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartbutton {
+  margin-top: 3%;
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  color: white;
+  border-style: none;
+  border-radius: 4px;
+}
+
+.quantity {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
