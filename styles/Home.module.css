@@ -72,7 +72,7 @@
   margin-top: 8%;
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  width: 72vw;
 }
 
 .aboutColumn {
@@ -80,7 +80,7 @@
 }
 
 .alchemyQuote {
-  margin-left: 10%;
+  margin-left: 20%;
 }
 
 .alchemyQuote h2 {
@@ -115,6 +115,7 @@
   font-size: 20px;
   font-weight: 400;
   margin-bottom: -6%;
+  margin-left: 2%;
 }
 
 .contactInfo,
@@ -134,4 +135,12 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: fit-content;
+}
+
+.socialicons {
+  width: 18%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-left: 2%;
 }

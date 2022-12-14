@@ -3,6 +3,8 @@ import Navbar from "../components/navbar";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import Card from "../components/card";
+import InstaLogo from "../public/instalogo.png";
+import facebooklogo from "../public/facebooklogo.png";
 
 export default function Home() {
   return (
@@ -92,15 +94,15 @@ export default function Home() {
 
         <div className={styles.contact}>
           <div className={styles.infocontainer}>
-            {" "}
-            <h2 className={styles.contactTitle}>Address</h2>
-            <p className={styles.contactAddress}>
-              123 Anywhere St., Any City, ST 12345
-            </p>
             <h2 className={styles.contactTitle}>Phone</h2>
             <p className={styles.contactInfo}>07375 356314</p>
             <h2 className={styles.contactTitle}>Email</h2>
             <p className={styles.contactInfo}>wvfoodalchemist@gmail.com</p>
+
+            <div className={styles.socialicons}>
+              <Image src={facebooklogo} width={50} height={50} />
+              <Image src={InstaLogo} width={50} height={50} />
+            </div>
           </div>
         </div>
       </main>
