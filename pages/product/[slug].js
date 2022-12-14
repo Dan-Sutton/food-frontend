@@ -2,11 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { useQuery } from "urql";
 import { GET_PRODUCT_QUERY } from "../../lib/query";
+import { useRouter } from "next/router";
 
 const ProductDetails = () => {
+  const { query } = useRouter();
   const [results] = useQuery({
     query: GET_PRODUCT_QUERY,
-    variables: { slug: "raw-Lavender-honey" },
+    variables: { slug: query.slug },
   });
   const { data, fetching, error } = results;
 
