@@ -1,6 +1,8 @@
 .navbar {
   width: 100vw;
   height: 13vh;
+  position: fixed;
+  background-color: white;
 }
 
 .titlediv {

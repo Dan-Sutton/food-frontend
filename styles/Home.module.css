@@ -1,4 +1,11 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .homecontent {
+  margin-top: 6%;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -6,7 +13,49 @@
 }
 
 .coverImage {
-  width: 90%;
+  width: 90vw;
   height: 530px;
   object-fit: cover;
+}
+
+.cardsRow {
+  margin-top: 7%;
+  display: flex;
+  width: 90vw;
+  justify-content: space-around;
+  /* border: 3px solid black; */
+  z-index: -5;
+  height: fit-content;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+
+  z-index: -5;
+  gap: 50px;
+}
+
+.reviewCard {
+  background-color: black;
+  height: 350px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.reviewContent {
+  padding: 5% 5% 0 5%;
+  color: white;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.5);
+  font-size: 25px;
+}
+
+.reviewAvatar {
+  height: 60px;
+  width: 60px;
+  background-color: blueviolet;
+  border-radius: 50%;
+  margin: 0 0 7% 7%;
 }
