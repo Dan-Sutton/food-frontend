@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Navbar from "../components/navbar";
+import styles from "../styles/Home.module.css";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -11,6 +13,18 @@ export default function Home() {
       </Head>
       <main>
         <Navbar />
+        <div className={styles.homecontent}>
+          <h2>Fine dining and street food specialist</h2>
+          <Image
+            className={styles.coverImage}
+            width={1000}
+            height={500}
+            alt=""
+            src={
+              "https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            }
+          />
+        </div>
       </main>
     </div>
   );
