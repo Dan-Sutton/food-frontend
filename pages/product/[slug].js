@@ -44,7 +44,7 @@ const ProductDetails = () => {
           <div className={styles.quantity}>
             <span>Quantity:</span>
 
-            <AiFillMinusCircle onClick={decreaseQty} />
+            <AiFillMinusCircle onClick={() => decreaseQty(quantity)} />
 
             <p>{quantity}</p>
 
