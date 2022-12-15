@@ -3,8 +3,10 @@ import Link from "next/link";
 import styles from "../styles/nav.module.css";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import Cart from "./cart";
+import { useStateContext } from "../lib/context";
 
 const Nav = () => {
+  const { setShowCart, showCart } = useStateContext();
   return (
     <div className={styles.navbar}>
       <div className={styles.navlist}>
@@ -13,9 +15,9 @@ const Nav = () => {
         <Link href={"/shop"}>shop</Link>
         <Link href={"/book"}>book</Link>
         <Link href={"/gallery"}>gallery</Link>
-        <HiOutlineShoppingBag />
+        <HiOutlineShoppingBag onClick={() => setShowCart(!showCart)} />
       </div>
-      <Cart />
+      {showCart && <Cart />}
     </div>
   );
 };
