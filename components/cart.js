@@ -8,12 +8,12 @@ const Cart = () => {
   return (
     <div className={styles.cartBackground}>
       <div className={styles.cart}>
-        {cartItems.legnth < 1 && (
+        {cartItems.length < 1 && (
           <div>
             <h1>Empty cart 😮</h1>
           </div>
         )}
-        {cartItems.legnth >= 1 &&
+        {cartItems.length >= 1 &&
           cartItems.map((item) => {
             return (
               <div className={styles.card}>
