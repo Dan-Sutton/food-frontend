@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { useQuery } from "urql";
 import { GET_PRODUCT_QUERY } from "../../lib/query";
@@ -8,6 +9,7 @@ import Navbar from "../../components/navbar";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 
 const ProductDetails = () => {
+  const [quantity, setQuantity] = useState(1);
   const { query } = useRouter();
   const [results] = useQuery({
     query: GET_PRODUCT_QUERY,
@@ -26,7 +28,7 @@ const ProductDetails = () => {
 
       <div className={styles.productContent}>
         <Image
-        className={styles.productImage}
+          className={styles.productImage}
           alt="productImage"
           width={300}
           height={300}
@@ -40,11 +42,17 @@ const ProductDetails = () => {
           <div className={styles.quantity}>
             <span>Quantity:</span>
 
-            <AiFillMinusCircle />
+            <AiFillMinusCircle
+              onClick={() => {
+                if (quantity > 1) {
+                  setQuantity(quantity - 1);
+                }
+              }}
+            />
 
-            <p>0</p>
+            <p>{quantity}</p>
 
-            <AiFillPlusCircle />
+            <AiFillPlusCircle onClick={() => setQuantity(quantity + 1)} />
           </div>
           <button className={styles.cartbutton}>Add to Cart</button>
         </div>
