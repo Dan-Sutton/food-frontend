@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styles from "../styles/nav.module.css";
 import { HiOutlineShoppingBag } from "react-icons/hi";
+import Cart from "./cart";
 
 const Nav = () => {
   return (
@@ -14,6 +15,7 @@ const Nav = () => {
         <Link href={"/gallery"}>gallery</Link>
         <HiOutlineShoppingBag />
       </div>
+      <Cart />
     </div>
   );
 };
