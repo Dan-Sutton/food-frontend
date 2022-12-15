@@ -9,7 +9,6 @@ import Navbar from "../../components/navbar";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 
 const ProductDetails = () => {
-
   const { query } = useRouter();
   const [results] = useQuery({
     query: GET_PRODUCT_QUERY,
@@ -50,7 +49,7 @@ const ProductDetails = () => {
               }}
             />
 
-            <p>{quantity}</p>
+            <p>QUANTITY</p>
 
             <AiFillPlusCircle onClick={() => setQuantity(quantity + 1)} />
           </div>
