@@ -9,7 +9,9 @@ const Navbar = () => {
     <div className={styles.navbar}>
       <div className={styles.titlediv}>
         <h1 className={styles.title}>THE FOOD ALCHEMIST</h1>
-        <Image className={styles.logo} src={logo} alt="alchemylogo" />
+        <div className={styles.logocontainer}>
+          <Image className={styles.logo} src={logo} alt="alchemylogo" />
+        </div>
       </div>
       <Nav />
     </div>

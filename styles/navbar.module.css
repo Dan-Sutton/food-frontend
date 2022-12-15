@@ -2,7 +2,9 @@
   width: 100vw;
   height: 13vh;
   position: fixed;
-  background-color: white;
+  z-index: 0;
+
+  /* background-color: white; */
 }
 
 .titlediv {
@@ -25,8 +27,22 @@
   font-weight: 400;
 }
 
+.logocontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 45px;
+  width: 350px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  margin-top: -13px;
+
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.04);
+}
+
 .logo {
-  width: 120px;
-  height: auto;
-  margin-top: -0.7%;
+  width: auto;
+  height: 25px;
 }
