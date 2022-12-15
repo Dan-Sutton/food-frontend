@@ -7,8 +7,10 @@ import { useRouter } from "next/router";
 import styles from "../../styles/productPage.module.css";
 import Navbar from "../../components/navbar";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
+import { useStateContext } from "../../lib/context";
 
 const ProductDetails = () => {
+  const { quantity, increaseQty, decreaseQty } = useStateContext();
   const { query } = useRouter();
   const [results] = useQuery({
     query: GET_PRODUCT_QUERY,
@@ -41,17 +43,11 @@ const ProductDetails = () => {
           <div className={styles.quantity}>
             <span>Quantity:</span>
 
-            <AiFillMinusCircle
-              onClick={() => {
-                if (quantity > 1) {
-                  setQuantity(quantity - 1);
-                }
-              }}
-            />
+            <AiFillMinusCircle onClick={decreaseQty} />
 
-            <p>QUANTITY</p>
+            <p>{quantity}</p>
 
-            <AiFillPlusCircle onClick={() => setQuantity(quantity + 1)} />
+            <AiFillPlusCircle onClick={increaseQty} />
           </div>
           <button className={styles.cartbutton}>Add to Cart</button>
         </div>
