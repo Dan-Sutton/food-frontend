@@ -20,5 +20,9 @@
   right: 0;
   width: 500px;
   height: 100vh;
-  z-index: 2;
+  z-index: 100;
+}
+
+.card {
+  background-color: aqua;
 }
