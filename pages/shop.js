@@ -15,8 +15,6 @@ const Shop = () => {
   const products = data.products.data;
   return (
     <div className={styles.shop}>
-      <Navbar />
-
       <div className={styles.shopcontent}>
         <h1>Latest products</h1>
         <div className={styles.products}>

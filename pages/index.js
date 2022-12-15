@@ -15,7 +15,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Navbar />
         <div className={styles.homecontent}>
           <h2>Fine dining and street food specialist</h2>
           <Image
