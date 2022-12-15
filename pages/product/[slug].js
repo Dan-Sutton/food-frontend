@@ -26,6 +26,7 @@ const ProductDetails = () => {
 
       <div className={styles.productContent}>
         <Image
+        className={styles.productImage}
           alt="productImage"
           width={300}
           height={300}

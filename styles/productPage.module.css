@@ -7,6 +7,7 @@
 .productContent {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   margin-top: 10%;
   /* border: 2px solid black; */
@@ -19,6 +20,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.productImage {
+  margin-right: 10%;
 }
 
 .cartbutton {
