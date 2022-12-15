@@ -9,7 +9,7 @@ import Navbar from "../../components/navbar";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 
 const ProductDetails = () => {
-  const [quantity, setQuantity] = useState(1);
+
   const { query } = useRouter();
   const [results] = useQuery({
     query: GET_PRODUCT_QUERY,
