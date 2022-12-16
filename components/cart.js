@@ -4,10 +4,22 @@ import { useStateContext } from "../lib/context";
 import styles from "../styles/cart.module.css";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { motion } from "framer-motion";
+import getStripe from "../lib/getStripe";
 
 const Cart = () => {
   const { cartItems, setShowCart, showCart, onAdd, onRemove, totalPrice } =
     useStateContext();
+
+  const handleCheckout = async () => {
+    const stripe = await getStripe();
+    const response = await fetch("/api/stripe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cartItems),
+    });
+    const data = await response.json();
+    await stripe.redirectToCheckout({ sessionId: data.id });
+  };
 
   const card = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -32,6 +44,7 @@ const Cart = () => {
       },
     },
   };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -117,7 +130,12 @@ const Cart = () => {
         {cartItems.length >= 1 && (
           <div>
             <h3>{`Subtotal: £${totalPrice}`}</h3>
-            <button className={styles.purchase}>Purchase</button>
+            <button
+              className={styles.purchase}
+              onClick={() => handleCheckout()}
+            >
+              Purchase
+            </button>
           </div>
         )}
       </motion.div>
