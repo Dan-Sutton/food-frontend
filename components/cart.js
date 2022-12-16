@@ -5,7 +5,7 @@ import styles from "../styles/cart.module.css";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 
 const Cart = () => {
-  const { cartItems, setShowCart, showCart, onAdd, onRemove } =
+  const { cartItems, setShowCart, showCart, onAdd, onRemove, totalPrice } =
     useStateContext();
   return (
     <div
@@ -56,6 +56,12 @@ const Cart = () => {
               </div>
             );
           })}
+        {cartItems.length >= 1 && (
+          <div>
+            <h3>{`Subtotal: £${totalPrice}`}</h3>
+            <button className={styles.purchase}>Purchase</button>
+          </div>
+        )}
       </div>
     </div>
   );
