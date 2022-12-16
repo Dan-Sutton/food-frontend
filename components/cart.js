@@ -3,18 +3,32 @@ import Image from "next/image";
 import { useStateContext } from "../lib/context";
 import styles from "../styles/cart.module.css";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const Cart = () => {
   const { cartItems, setShowCart, showCart, onAdd, onRemove, totalPrice } =
     useStateContext();
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.1 } }}
       className={styles.cartBackground}
       onClick={() => {
         setShowCart(!showCart);
       }}
     >
-      <div
+      <motion.div
+        initial={{ x: 200 }}
+        animate={{
+          x: 0,
+          transition: {
+            duration: 0.1,
+            type: "spring",
+            damping: 10,
+            mass: 0.35,
+            stiffness: 100,
+          },
+        }}
         className={styles.cart}
         onClick={(e) => {
           e.stopPropagation();
@@ -62,8 +76,8 @@ const Cart = () => {
             <button className={styles.purchase}>Purchase</button>
           </div>
         )}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
