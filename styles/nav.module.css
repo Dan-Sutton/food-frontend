@@ -18,3 +18,27 @@
   font-size: 14px;
   z-index: 1;
 }
+
+.cartDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2px;
+}
+
+.cartIcon {
+  font-size: 18px;
+}
+
+.quantities {
+  font-size: 9px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  border-radius: 50%;
+  height: 17px;
+  width: 17px;
+}

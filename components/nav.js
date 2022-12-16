@@ -6,7 +6,7 @@ import Cart from "./cart";
 import { useStateContext } from "../lib/context";
 
 const Nav = () => {
-  const { setShowCart, showCart } = useStateContext();
+  const { setShowCart, showCart, totalQuantities } = useStateContext();
   return (
     <div className={styles.navbar}>
       <div className={styles.navlist}>
@@ -15,7 +15,15 @@ const Nav = () => {
         <Link href={"/shop"}>shop</Link>
         <Link href={"/book"}>book</Link>
         <Link href={"/gallery"}>gallery</Link>
-        <HiOutlineShoppingBag onClick={() => setShowCart(!showCart)} />
+        <div className={styles.cartDiv}>
+          <HiOutlineShoppingBag
+            className={styles.cartIcon}
+            onClick={() => setShowCart(!showCart)}
+          />
+          {totalQuantities > 0 && (
+            <span className={styles.quantities}>{totalQuantities}</span>
+          )}
+        </div>
       </div>
       {showCart && <Cart />}
     </div>
