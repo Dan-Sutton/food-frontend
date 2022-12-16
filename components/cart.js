@@ -8,6 +8,30 @@ import { motion } from "framer-motion";
 const Cart = () => {
   const { cartItems, setShowCart, showCart, onAdd, onRemove, totalPrice } =
     useStateContext();
+
+  const card = {
+    hidden: { opacity: 0, scale: 0.8 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        type: "spring",
+        bounce: 0.3,
+      },
+    },
+  };
+
+  const cards = {
+    hidden: { opacity: 1 },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.15,
+      },
+    },
+  };
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -51,37 +75,44 @@ const Cart = () => {
             <h1>Your Cart is empty</h1>
           </div>
         )}
-        {cartItems.length >= 1 &&
-          cartItems.map((item) => {
-            return (
-              <div key={item.slug} className={styles.card}>
-                <Image
-                  height={100}
-                  width={100}
-                  alt={item.title}
-                  src={item.image.data.attributes.url}
-                />
+        <motion.div variants={cards} initial="hidden" animate="show">
+          {cartItems.length >= 1 &&
+            cartItems.map((item) => {
+              return (
+                <motion.div
+                  variants={card}
+                  key={item.slug}
+                  className={styles.card}
+                >
+                  <Image
+                    height={100}
+                    width={100}
+                    alt={item.title}
+                    src={item.image.data.attributes.url}
+                  />
 
-                <div className={styles.itemInfo}>
-                  <h3>{item.title}</h3>
-                  <p>{`£${item.price}`}</p>
-                  <div className={styles.quantity}>
-                    <span>Quantity:</span>
+                  <div className={styles.itemInfo}>
+                    <h3>{item.title}</h3>
+                    <p>{`£${item.price}`}</p>
+                    <div className={styles.quantity}>
+                      <span>Quantity:</span>
 
-                    <AiFillMinusCircle
-                      onClick={() => {
-                        onRemove(item);
-                      }}
-                    />
+                      <AiFillMinusCircle
+                        onClick={() => {
+                          onRemove(item);
+                        }}
+                      />
 
-                    <p>{item.quantity}</p>
+                      <p>{item.quantity}</p>
 
-                    <AiFillPlusCircle onClick={() => onAdd(item, 1)} />
+                      <AiFillPlusCircle onClick={() => onAdd(item, 1)} />
+                    </div>
                   </div>
-                </div>
-              </div>
-            );
-          })}
+                </motion.div>
+              );
+            })}
+        </motion.div>
+
         {cartItems.length >= 1 && (
           <div>
             <h3>{`Subtotal: £${totalPrice}`}</h3>
