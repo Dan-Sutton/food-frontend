@@ -75,11 +75,12 @@ const Cart = () => {
             <h1>Your Cart is empty</h1>
           </div>
         )}
-        <motion.div variants={cards} initial="hidden" animate="show">
+        <motion.div variants={cards} initial="hidden" animate="show" layout>
           {cartItems.length >= 1 &&
             cartItems.map((item) => {
               return (
                 <motion.div
+                  layout
                   variants={card}
                   key={item.slug}
                   className={styles.card}
