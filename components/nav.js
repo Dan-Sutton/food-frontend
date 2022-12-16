@@ -4,6 +4,7 @@ import styles from "../styles/nav.module.css";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import Cart from "./cart";
 import { useStateContext } from "../lib/context";
+import { AnimatePresence } from "framer-motion";
 
 const Nav = () => {
   const { setShowCart, showCart, totalQuantities } = useStateContext();
@@ -25,7 +26,7 @@ const Nav = () => {
           )}
         </div>
       </div>
-      {showCart && <Cart />}
+      <AnimatePresence>{showCart && <Cart />}</AnimatePresence>
     </div>
   );
 };

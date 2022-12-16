@@ -16,11 +16,23 @@ const Cart = () => {
       onClick={() => {
         setShowCart(!showCart);
       }}
+      exit={{ opacity: 0, transition: { duration: 0.4 } }}
     >
       <motion.div
         initial={{ x: 200 }}
         animate={{
           x: 0,
+          transition: {
+            duration: 0.1,
+            type: "spring",
+            damping: 10,
+            mass: 0.35,
+            stiffness: 100,
+          },
+        }}
+        exit={{
+          x: 500,
+          opacity: 0,
           transition: {
             duration: 0.1,
             type: "spring",
