@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import styles from "../styles/success.module.css";
+import { motion } from "framer-motion";
 
 const stripe = require("stripe")(`${process.env.NEXT_PUBLIC_SECRET_KEY}`);
 
@@ -18,7 +19,16 @@ const Success = ({ order }) => {
   const route = useRouter();
   return (
     <div className={styles.successpage}>
-      <div className={styles.successcard}>
+      <motion.div
+        className={styles.successcard}
+        initial={{ opacity: 0, scale: 0.75 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.6,
+          type: "spring",
+          bounce: 0.3,
+        }}
+      >
         <h1>Thank you for your order!</h1>
         <h2>A confirmation has been sent to</h2>
         <h2>{order.customer_details.email}</h2>
@@ -54,7 +64,7 @@ const Success = ({ order }) => {
         >
           Continue shopping
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 };
