@@ -5,6 +5,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import Cart from "./cart";
 import { useStateContext } from "../lib/context";
 import { AnimatePresence } from "framer-motion";
+import User from "./User";
 
 const Nav = () => {
   const { setShowCart, showCart, totalQuantities } = useStateContext();
@@ -16,6 +17,7 @@ const Nav = () => {
         <Link href={"/shop"}>shop</Link>
         <Link href={"/book"}>book</Link>
         <Link href={"/gallery"}>gallery</Link>
+        <User />
         <div className={styles.cartDiv}>
           <HiOutlineShoppingBag
             className={styles.cartIcon}

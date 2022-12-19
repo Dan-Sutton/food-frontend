@@ -1,0 +1,25 @@
+.userContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+}
+
+.usericon {
+  width: 17px;
+  height: auto;
+  cursor: pointer;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
