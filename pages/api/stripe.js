@@ -13,7 +13,7 @@ export default async function handler(req, res) {
           allowed_countries: ["GB"],
         },
         allow_promotion_codes: true,
-        shipping_options: [{ shipping_rate: "shr_1MFhfkH0fUSt37v318qJmWvv" }],
+        // shipping_options: [{ shipping_rate: "shr_1MFhfkH0fUSt37v318qJmWvv" }],
         line_items: req.body.map((item) => {
           return {
             price_data: {

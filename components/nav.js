@@ -5,7 +5,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import Cart from "./cart";
 import { useStateContext } from "../lib/context";
 import { AnimatePresence } from "framer-motion";
-import User from "./User";
+// import User from "./User";
 import { useUser } from "@auth0/nextjs-auth0/client";
 
 const Nav = () => {
@@ -19,7 +19,7 @@ const Nav = () => {
         <Link href={"/shop"}>shop</Link>
         <Link href={"/book"}>book</Link>
         <Link href={"/gallery"}>gallery</Link>
-        <User />
+        {/* <User /> */}
         <div className={styles.cartDiv}>
           <HiOutlineShoppingBag
             className={styles.cartIcon}
