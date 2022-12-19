@@ -6,9 +6,11 @@ import Cart from "./cart";
 import { useStateContext } from "../lib/context";
 import { AnimatePresence } from "framer-motion";
 import User from "./User";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 const Nav = () => {
   const { setShowCart, showCart, totalQuantities } = useStateContext();
+  const { user, error, isLoading } = useUser();
   return (
     <div className={styles.navbar}>
       <div className={styles.navlist}>
