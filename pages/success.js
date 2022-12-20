@@ -17,6 +17,10 @@ export async function getServerSideProps(params) {
 }
 
 const Success = ({ order }) => {
+  function formatAddressTitle(title) {
+    const capital = title.charAt(0).toUpperCase() + title.slice(1);
+    return capital.split("_").join(" ");
+  }
   const route = useRouter();
   return (
     <div className={styles.successpage}>
@@ -40,7 +44,7 @@ const Success = ({ order }) => {
             {Object.entries(order.customer_details.address).map(
               ([key, val]) => (
                 <p key={key}>
-                  {key}: {val}
+                  {formatAddressTitle(key)}: {val}
                 </p>
               )
             )}
