@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import styles from "../styles/success.module.css";
 import { motion } from "framer-motion";
+import formatMoney from "../lib/formatMoney";
 
 const stripe = require("stripe")(`${process.env.NEXT_PUBLIC_SECRET_KEY}`);
 
@@ -51,7 +52,7 @@ const Success = ({ order }) => {
                 <div key={item.id}>
                   <p>Product: {item.description}</p>
                   <p>Quantity: {item.quantity}</p>
-                  <p>Price: £{item.price.unit_amount}</p>
+                  <p>Price: {formatMoney(item.price.unit_amount)}</p>
                 </div>
               ))}
             </h3>
