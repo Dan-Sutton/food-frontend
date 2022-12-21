@@ -1,10 +1,8 @@
 import React from "react";
 import { useQuery } from "urql";
 import ProductComponent from "../components/product";
-import Product from "../components/product";
 import { PRODUCT_QUERY } from "../lib/query";
 import styles from "../styles/shop.module.css";
-import Navbar from "../components/navbar";
 
 const Shop = () => {
   const [results] = useQuery({ query: PRODUCT_QUERY });

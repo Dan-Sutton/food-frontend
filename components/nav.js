@@ -19,6 +19,7 @@ const Nav = () => {
         <Link href={"/shop"}>shop</Link>
         <Link href={"/book"}>book</Link>
         <Link href={"/gallery"}>gallery</Link>
+        <Link href={"/event"}>events</Link>
         {/* <User /> */}
         <div className={styles.cartDiv}>
           <HiOutlineShoppingBag
