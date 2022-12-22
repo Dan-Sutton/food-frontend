@@ -3,6 +3,7 @@ import { useQuery } from "urql";
 import ProductComponent from "../components/product";
 import { PRODUCT_QUERY } from "../lib/query";
 import styles from "../styles/shop.module.css";
+import { motion } from "framer-motion";
 
 const Shop = () => {
   const [results] = useQuery({ query: PRODUCT_QUERY });
@@ -15,11 +16,16 @@ const Shop = () => {
     <div className={styles.shop}>
       <div className={styles.shopcontent}>
         <h1>Latest products</h1>
-        <div className={styles.products}>
+        <motion.div
+          className={styles.products}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
           {products.map((product, index) => (
             <ProductComponent key={product.attributes.slug} product={product} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

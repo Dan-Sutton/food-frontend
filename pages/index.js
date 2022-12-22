@@ -70,7 +70,7 @@ export default function Home() {
               </p>
             </div>
             <div className={styles.aboutContent}>
-              <h2>ABOUT</h2>
+              <h2 id="#about">ABOUT</h2>
               <p>
                 STUFF ABOUT MATT AND HIS APPROACH Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

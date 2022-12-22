@@ -15,7 +15,7 @@ const Nav = () => {
     <div className={styles.navbar}>
       <div className={styles.navlist}>
         <Link href={"/"}>home</Link>
-        <Link href={"/about"}>about</Link>
+        <Link href={"/"}>about</Link>
         <Link href={"/shop"}>shop</Link>
         <Link href={"/book"}>book</Link>
         <Link href={"/gallery"}>gallery</Link>

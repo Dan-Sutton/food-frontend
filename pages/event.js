@@ -3,10 +3,35 @@ import { useQuery } from "urql";
 import Link from "next/link";
 import { EVENT_QUERY } from "../lib/query";
 import styles from "../styles/events.module.css";
+import { motion } from "framer-motion";
 
 const Event = () => {
   const [results] = useQuery({ query: EVENT_QUERY });
   const { data, fetching, error } = results;
+
+  const eventAnim = {
+    hidden: { opacity: 0, scale: 0.8 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.9,
+        type: "spring",
+        bounce: 0.2,
+      },
+    },
+  };
+
+  const eventsAnim = {
+    hidden: { opacity: 1 },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.25,
+        staggerChildren: 0.15,
+      },
+    },
+  };
 
   function checkForSingleDigit(num) {
     let returnNum;
@@ -38,9 +63,20 @@ const Event = () => {
     <div className={styles.events}>
       <div className={styles.eventContent}>
         <h1>Events</h1>
-        <div className={styles.eventContainer}>
+        <motion.div
+          className={styles.eventContainer}
+          variants={eventsAnim}
+          initial="hidden"
+          animate="show"
+          layout
+        >
           {events.map((event, index) => (
-            <div className={styles.event}>
+            <motion.div
+              className={styles.event}
+              key={event.id}
+              layout
+              variants={eventAnim}
+            >
               <h3>{event.attributes.title}</h3>
 
               <img src={event.attributes.image.data[0].attributes.url}></img>
@@ -50,9 +86,9 @@ const Event = () => {
                 className={styles.link}
                 href={event.attributes.link}
               >{`Event: ${event.attributes.link}`}</Link>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
