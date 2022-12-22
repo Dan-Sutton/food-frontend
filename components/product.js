@@ -2,12 +2,13 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/product.module.css";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const ProductComponent = ({ product }) => {
   const { title, price, image, slug } = product.attributes;
 
   return (
-    <div className={styles.product}>
+    <motion.div className={styles.product} whileHover={{ scale: 1.07 }}>
       <Link href={`/product/${slug}`}>
         <div>
           <Image
@@ -22,7 +23,7 @@ const ProductComponent = ({ product }) => {
         <h2>{title}</h2>
         <h3>{`£${price}`}</h3>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 
