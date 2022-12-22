@@ -15,8 +15,18 @@
 
 .coverImage {
   width: 90vw;
-  height: 530px;
+  height: auto;
+
+  z-index: -2;
+}
+
+.coverImage img {
   object-fit: cover;
+  height: 500px;
+}
+
+.carouselContainer {
+  height: 500px;
 }
 
 .cardsRow {

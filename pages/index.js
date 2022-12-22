@@ -5,6 +5,8 @@ import Image from "next/image";
 import Card from "../components/card";
 import InstaLogo from "../public/instalogo.png";
 import facebooklogo from "../public/facebooklogo.png";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 export default function Home() {
   return (
@@ -17,7 +19,24 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.homecontent}>
           <h2>Fine dining and street food specialist</h2>
-          <Image
+
+          <Carousel
+            className={styles.coverImage}
+            autoPlay
+            infiniteLoop
+            showThumbs={false}
+            interval={2000}
+            transitionTime={500}
+            showArrows={false}
+          >
+            <div>
+              <img src="https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+            </div>
+            <div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg" />
+            </div>
+          </Carousel>
+          {/* <Image
             className={styles.coverImage}
             width={1000}
             height={500}
@@ -25,7 +44,7 @@ export default function Home() {
             src={
               "https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             }
-          />
+          /> */}
         </div>
         <h2 className={styles.subheading}>WHAT WE DO</h2>
         <div className={styles.cardsRow}>
