@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
       <motion.main
         className={styles.main}
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
       >
