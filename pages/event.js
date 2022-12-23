@@ -4,6 +4,7 @@ import Link from "next/link";
 import { EVENT_QUERY } from "../lib/query";
 import styles from "../styles/events.module.css";
 import { motion } from "framer-motion";
+import Footer from "../components/footer";
 
 const Event = () => {
   const [results] = useQuery({ query: EVENT_QUERY });
@@ -90,6 +91,7 @@ const Event = () => {
           ))}
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 };

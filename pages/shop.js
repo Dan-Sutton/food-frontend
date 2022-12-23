@@ -4,6 +4,7 @@ import ProductComponent from "../components/product";
 import { PRODUCT_QUERY } from "../lib/query";
 import styles from "../styles/shop.module.css";
 import { motion } from "framer-motion";
+import Footer from "../components/footer";
 
 const Shop = () => {
   const [results] = useQuery({ query: PRODUCT_QUERY });
@@ -27,6 +28,7 @@ const Shop = () => {
           ))}
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 };

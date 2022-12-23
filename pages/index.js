@@ -3,11 +3,11 @@ import Navbar from "../components/navbar";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import Card from "../components/card";
-import InstaLogo from "../public/instalogo.png";
-import facebooklogo from "../public/facebooklogo.png";
+
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { motion } from "framer-motion";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -106,20 +106,7 @@ export default function Home() {
             }
           />
         </div>
-
-        <div className={styles.contact}>
-          <div className={styles.infocontainer}>
-            <h2 className={styles.contactTitle}>Phone</h2>
-            <p className={styles.contactInfo}>07375 356314</p>
-            <h2 className={styles.contactTitle}>Email</h2>
-            <p className={styles.contactInfo}>wvfoodalchemist@gmail.com</p>
-
-            <div className={styles.socialicons}>
-              <Image src={facebooklogo} width={50} height={50} />
-              <Image src={InstaLogo} width={50} height={50} />
-            </div>
-          </div>
-        </div>
+        <Footer />
       </motion.main>
     </div>
   );
