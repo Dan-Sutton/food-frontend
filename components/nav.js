@@ -20,7 +20,7 @@ const Nav = () => {
         <Link href={"/contact"}>contact</Link>
         {/* <Link href={"/book"}>book</Link> */}
         <Link href={"/event"}>events</Link>
-        <Link href={"/gallery"}>gallery</Link>
+        {/* <Link href={"/gallery"}>gallery</Link> */}
         {/* <User /> */}
         <div className={styles.cartDiv}>
           <HiOutlineShoppingBag
