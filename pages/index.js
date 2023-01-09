@@ -94,6 +94,15 @@ export default function Home() {
               "https://scontent-lcy1-2.xx.fbcdn.net/v/t39.30808-6/307190751_519719576824366_7580912843412553151_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=DOI-Se_t_YEAX-YY-A2&tn=xxljlX7NizALkybY&_nc_ht=scontent-lcy1-2.xx&oh=00_AfD__8l4juEMXgLltJ39NRCB29Mx0tQlfaYOR2AJ0aVdAQ&oe=639F43DD"
             }
           />
+          <Card
+            title={"BRAND CONSULT-ANCY"}
+            content={
+              "WAKE UP TO A LAKE-SIDE BREAKFAST IN YOUR CHOICE OF LUXURY OFF-GRID ACCOMMODATION. CHOOSE FROM SEVERAL BEAUTIFUL LOG CABINS, A LAKE HOUSE, OR THE ROMANTIC GEOMETRIC DOME, ALL WITH CENTRAL HEATING & FIRE PITS SET AMONGST A BEAUTIFUL 20-ACRE BACKDROP. BREATH WORK, VAGUS NERVE RESET & MEDITATION SESSIONS AVAILABLE WITH JACOB FROM OHMBRELLA. "
+            }
+            image={
+              "https://scontent-lcy1-2.xx.fbcdn.net/v/t39.30808-6/307190751_519719576824366_7580912843412553151_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=DOI-Se_t_YEAX-YY-A2&tn=xxljlX7NizALkybY&_nc_ht=scontent-lcy1-2.xx&oh=00_AfD__8l4juEMXgLltJ39NRCB29Mx0tQlfaYOR2AJ0aVdAQ&oe=639F43DD"
+            }
+          />
         </div>
 
         {/* <div className={styles.reviewCard}>
