@@ -31,7 +31,7 @@
   height: 500px;
 }
 
-.cardsRow {
+/* .cardsRow {
   display: flex;
   width: 90vw;
   justify-content: space-around;
@@ -40,14 +40,17 @@
   gap: 10%;
   z-index: -5;
   height: 350px;
-}
+  margin-bottom: 20px;
+} */
 
 .cards {
   display: flex;
   justify-content: space-around;
-
+  flex-wrap: wrap;
   z-index: -5;
   gap: 50px;
+  margin-bottom: 100px;
+  height: fit-content;
 }
 
 .reviewCard {
@@ -81,7 +84,7 @@
 }
 
 .about {
-  margin-top: 8%;
+  /* margin-top: 500px; */
   display: flex;
   justify-content: space-between;
   width: 72vw;

@@ -14,9 +14,9 @@ const Card = ({ image, title, content }) => {
       />
       <div className={styles.cardBody}>
         <h2 className={styles.title}>{title}</h2>
-        <div>
+        {/* <div>
           <p className={styles.content}>{content}</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
