@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Card = ({ image, title, content }) => {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={() => console.log("CLICKUIFHGWErUI")}>
       <Image
         className={styles.image}
         width={500}
