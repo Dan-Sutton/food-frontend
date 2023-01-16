@@ -2,9 +2,9 @@ import React from "react";
 import styles from "../styles/card.module.css";
 import Image from "next/image";
 
-const Card = ({ image, title, content }) => {
+const Card = ({ image, title, content, handleShowCardModal, index }) => {
   return (
-    <div className={styles.card} onClick={() => console.log("CLICKUIFHGWErUI")}>
+    <div className={styles.card} onClick={() => handleShowCardModal(index)}>
       <Image
         className={styles.image}
         width={500}
@@ -14,9 +14,6 @@ const Card = ({ image, title, content }) => {
       />
       <div className={styles.cardBody}>
         <h2 className={styles.title}>{title}</h2>
-        {/* <div>
-          <p className={styles.content}>{content}</p>
-        </div> */}
       </div>
     </div>
   );
