@@ -10,6 +10,7 @@ import { Carousel } from "react-responsive-carousel";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
 import { servicesData } from "../lib/seedData/servicesData";
+import matt from "../lib/gallery/matt.jpeg";
 
 export default function Home() {
   const [showCardModal, setShowCardModal] = useState(false);
@@ -108,9 +109,7 @@ export default function Home() {
             className={styles.aboutImage}
             width={350}
             height={470}
-            src={
-              "https://scontent-lcy1-2.xx.fbcdn.net/v/t39.30808-6/281354957_1612650865802067_1672438071863318489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a26aad&_nc_ohc=MKS6_bZQ2vkAX8Uxqxj&tn=xxljlX7NizALkybY&_nc_ht=scontent-lcy1-2.xx&oh=00_AfD-AN3--zXjh7uSGIsZRwdhzlUZI9ICGrVPdAPPd6qiFQ&oe=639E5BDD"
-            }
+            src={matt}
           />
         </div>
         <Footer />

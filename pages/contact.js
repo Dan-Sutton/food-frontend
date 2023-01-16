@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/contact.module.css";
+import Footer from "../components/footer";
 
 const Contact = () => {
   return (
@@ -17,6 +18,7 @@ const Contact = () => {
           placeholder="Message"
         />
       </div>
+      <Footer />
     </div>
   );
 };

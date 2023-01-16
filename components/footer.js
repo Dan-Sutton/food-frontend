@@ -14,8 +14,32 @@ const Footer = () => {
         <p className={styles.contactInfo}>wvfoodalchemist@gmail.com</p>
 
         <div className={styles.socialicons}>
-          <Image src={facebooklogo} width={50} height={50} />
-          <Image src={InstaLogo} width={50} height={50} />
+          <Image
+            src={facebooklogo}
+            width={50}
+            height={50}
+            onClick={() =>
+              window
+                .open(
+                  "https://www.facebook.com/thefoodalchemistwolverhampton",
+                  "_blank"
+                )
+                .focus()
+            }
+          />
+          <Image
+            src={InstaLogo}
+            width={50}
+            height={50}
+            onClick={() =>
+              window
+                .open(
+                  "https://www.instagram.com/the_food_alchemist_/",
+                  "_blank"
+                )
+                .focus()
+            }
+          />
         </div>
       </div>
     </div>

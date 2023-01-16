@@ -24,6 +24,7 @@
 
 .productImage {
   margin-right: 10%;
+  object-fit: cover;
 }
 
 .cartbutton {
