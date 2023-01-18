@@ -85,6 +85,7 @@
   display: flex;
   justify-content: space-between;
   width: 72vw;
+  flex-wrap: wrap;
 }
 
 .aboutColumn {
@@ -117,4 +118,40 @@
 .aboutImage {
   object-fit: cover;
   width: 390px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+  margin-top: 50px;
+  background-color: black;
+}
+
+.subhead {
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  width: 80%;
+}
+.headervid {
+  width: 90vw;
+  object-fit: cover;
+  height: 100%;
+}
+
+@media (max-width: 904px) {
+  .alchemyQuote,
+  .aboutContent {
+    width: 80vw;
+  }
+
+  .alchemyQuote {
+    margin-top: -100px;
+  }
+  .alchemyQuote h2 {
+    margin-bottom: 60px;
+  }
 }

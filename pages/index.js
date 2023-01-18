@@ -42,8 +42,28 @@ export default function Home() {
         transition={{ duration: 1, delay: 0.2 }}
       >
         <div className={styles.homecontent}>
-          <h2>Fine dining and street food specialist</h2>
+          <div className={styles.header}>
+            <h2 className={styles.subhead}>
+              Fine dining and street food specialist
+            </h2>
+            <video
+              className={styles.headervid}
+              preload="true"
+              playsInline
+              autoPlay
+              muted
+              loop
+            >
+              <source
+                src={
+                  "https://drive.google.com/uc?export=view&id=1k2Z9Gfmzq0bqF0HYX4avhrMmJVv39c6L"
+                }
+                type="video/mp4"
+              />
+            </video>
+          </div>
 
+          {/* 
           <Carousel
             className={styles.coverImage}
             autoPlay
@@ -59,7 +79,7 @@ export default function Home() {
             <div>
               <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg" />
             </div>
-          </Carousel>
+          </Carousel> */}
         </div>
         <h2 className={styles.subheading}>WHAT WE DO</h2>
 

@@ -5,8 +5,10 @@ import Footer from "../components/footer";
 const Contact = () => {
   return (
     <div className={styles.contactPage}>
-      <h2>Contact</h2>
-      <p>Get in contact now to secure bookings, or if you have any queries.</p>
+      <h2 className={styles.title}>Contact</h2>
+      <p className={styles.subheading}>
+        Get in contact now to secure bookings, or if you have any queries.
+      </p>
 
       <div className={styles.contactForm}>
         <input placeholder="Full name" />

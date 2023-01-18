@@ -5,8 +5,14 @@
   margin-top: 100px;
 }
 
-.contactPage h2 {
+.title {
   font-size: 40px;
+  margin-bottom: -1px;
+}
+
+.subheading {
+  width: min(430px, 80vw);
+  text-align: center;
 }
 
 .contactForm {
@@ -19,7 +25,7 @@
 
 .contactForm input,
 .contactForm textarea {
-  width: 430px;
+  width: min(430px, 80vw);
   height: 50px;
   /* background-color: grey; */
   border-style: none;
