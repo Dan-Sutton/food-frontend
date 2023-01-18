@@ -85,6 +85,9 @@ const Cart = () => {
       >
         {cartItems.length < 1 && (
           <div>
+            <h2 className={styles.exit} onClick={() => setShowCart(!showCart)}>
+              x
+            </h2>
             <h1>Your Cart is empty</h1>
           </div>
         )}
