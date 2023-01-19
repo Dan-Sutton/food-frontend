@@ -42,7 +42,7 @@ export default function Home() {
         transition={{ duration: 1, delay: 0.2 }}
       >
         <div className={styles.homecontent}>
-          <div className={styles.header}>
+          {/* <div className={styles.header}>
             <h2 className={styles.subhead}>
               Fine dining and street food specialist
             </h2>
@@ -61,7 +61,7 @@ export default function Home() {
                 type="video/mp4"
               />
             </video>
-          </div>
+          </div> */}
 
           {/* 
           <Carousel

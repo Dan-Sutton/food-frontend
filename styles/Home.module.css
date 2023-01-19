@@ -76,8 +76,9 @@
 
 .subheading {
   font-size: 30px;
-  width: 90vw;
+  width: 100vw;
   margin-bottom: 3%;
+  text-align: center;
 }
 
 .about {
