@@ -81,7 +81,7 @@ export default function Home() {
             </div>
           </Carousel> */}
         </div>
-        <h2 className={styles.subheading}>WHAT WE DO</h2>
+        {/* <h2 className={styles.subheading}>WHAT WE DO</h2> */}
 
         <div className={styles.cards}>
           {servicesData.map((e, index) => (
