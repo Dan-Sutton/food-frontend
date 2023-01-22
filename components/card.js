@@ -1,10 +1,15 @@
 import React from "react";
 import styles from "../styles/card.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Card = ({ image, title, content, handleShowCardModal, index }) => {
   return (
-    <div className={styles.card} onClick={() => handleShowCardModal(index)}>
+    <motion.div
+      whileHover={{ scale: 1.07 }}
+      className={styles.card}
+      onClick={() => handleShowCardModal(index)}
+    >
       <Image
         className={styles.image}
         width={500}
@@ -15,7 +20,7 @@ const Card = ({ image, title, content, handleShowCardModal, index }) => {
       <div className={styles.cardBody}>
         <h2 className={styles.title}>{title}</h2>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
