@@ -20,7 +20,7 @@ const ProductComponent = ({ product }) => {
           />
         </div>
 
-        <h2>{title}</h2>
+        <h2 className={styles.productTitle}>{title}</h2>
         <h3>{`£${price}`}</h3>
       </Link>
     </motion.div>
