@@ -59,11 +59,16 @@ const Event = () => {
 
   if (fetching) return <p>Loading...</p>;
   if (error) return <p>Something went wrong...{error.message}</p>;
+
   const events = data.events.data;
   return (
     <div className={styles.events}>
       <div className={styles.eventContent}>
-        <h1>Events</h1>
+        {events.length === 0 ? (
+          <h1 className={styles.noevents}>No events at the moment!</h1>
+        ) : (
+          <h1>Events</h1>
+        )}
         <motion.div
           className={styles.eventContainer}
           variants={eventsAnim}
