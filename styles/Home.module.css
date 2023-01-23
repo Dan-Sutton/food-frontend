@@ -41,11 +41,12 @@
 } */
 
 .cards {
-  width: 80vw;
+  
+  width: min(1100px, 80vw);
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px;
   margin-bottom: 100px;
   height: fit-content;
 }

@@ -21,6 +21,30 @@ export default function Home() {
     setShowCardModal(!showCardModal);
   }
 
+  const card = {
+    hidden: { opacity: 0, scale: 0.8 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 1.5,
+        type: "spring",
+        bounce: 0.2,
+      },
+    },
+  };
+
+  const cards = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
     <div>
       {showCardModal ? (
@@ -41,68 +65,33 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
       >
-        <div className={styles.homecontent}>
-          {/* <div className={styles.header}>
-            <h2 className={styles.subhead}>
-              Fine dining and street food specialist
-            </h2>
-            <video
-              className={styles.headervid}
-              preload="true"
-              playsInline
-              autoPlay
-              muted
-              loop
-            >
-              <source
-                src={
-                  "https://drive.google.com/uc?export=view&id=1k2Z9Gfmzq0bqF0HYX4avhrMmJVv39c6L"
-                }
-                type="video/mp4"
-              />
-            </video>
-          </div> */}
-
-          {/* 
-          <Carousel
-            className={styles.coverImage}
-            autoPlay
-            infiniteLoop
-            showThumbs={false}
-            interval={2000}
-            transitionTime={500}
-            showArrows={false}
-          >
-            <div>
-              <img src="https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
-            </div>
-            <div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg" />
-            </div>
-          </Carousel> */}
-        </div>
+        <div className={styles.homecontent}></div>
         {/* <h2 className={styles.subheading}>WHAT WE DO</h2> */}
 
-        <div className={styles.cards}>
+        <motion.div
+          className={styles.cards}
+          variants={cards}
+          initial="hidden"
+          animate="show"
+          layout
+        >
           {servicesData.map((e, index) => (
-            <Card
-              title={e.title}
-              content={e.content}
-              image={e.image}
-              handleShowCardModal={handleShowCardModal}
-              index={index}
-            />
+            <motion.div
+              layout
+              variants={card}
+              key={e.slug}
+              // className={styles.card}
+            >
+              <Card
+                title={e.title}
+                content={e.content}
+                image={e.image}
+                handleShowCardModal={handleShowCardModal}
+                index={index}
+              />
+            </motion.div>
           ))}
-        </div>
-
-        {/* <div className={styles.reviewCard}>
-            <p className={styles.reviewContent}>
-              Most amazing food I’ve eaten! Biscoff chicken is something else
-              entirely... I even dream about it HIGHLY RECOMMEND
-              ⭐️⭐️⭐️⭐️⭐️' -2022{" "}
-            </p>
-            <div className={styles.reviewAvatar}></div>
-          </div> */}
+        </motion.div>
 
         <div className={styles.about}>
           <div className={styles.aboutColumn}>
