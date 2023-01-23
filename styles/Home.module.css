@@ -41,7 +41,7 @@
 } */
 
 .cards {
-  
+  padding-top: min(35%, 40px);
   width: min(1100px, 80vw);
   display: flex;
   justify-content: space-around;

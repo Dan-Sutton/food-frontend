@@ -1,6 +1,6 @@
 .burgercontainer {
   background-color: white;
-  width: min(50vw, 400px);
+  width: min(60vw, 400px);
   height: 100vh;
   position: absolute;
   top: 0;
