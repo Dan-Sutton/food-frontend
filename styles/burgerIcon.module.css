@@ -1,0 +1,12 @@
+.icon {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  right: 10px;
+}
+
+@media (min-width: 1160px) {
+  .burgerIcon {
+    display: none;
+  }
+}

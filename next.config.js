@@ -8,6 +8,7 @@ const nextConfig = {
       "scontent-lcy1-2.xx.fbcdn.net",
       "lh3.googleusercontent.com",
       "picsum.photos",
+      "upload.wikimedia.org",
     ],
   },
 };
