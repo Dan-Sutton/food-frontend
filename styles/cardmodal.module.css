@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: max(50vw, 400px);
+  width: max(50vw, 600px);
   background-color: white;
   display: flex;
   padding: 30px;
@@ -35,4 +35,30 @@
 .image {
   display: flex;
   flex-direction: column;
+}
+
+.cardimage {
+  object-fit: cover;
+}
+
+@media (max-width: 1080px) {
+  .content {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 755px) {
+  .content {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 605px) {
+  .content {
+    margin-top: 15vh;
+  }
+  .image {
+    display: none;
+  }
 }

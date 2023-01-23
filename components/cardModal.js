@@ -25,9 +25,15 @@ const CardModal = ({ showCardModal, setShowCardModal, cardData }) => {
           <h1>{cardData.title.replace("-", "")}</h1>
           <p>{cardData.content}</p>
         </div>
-        {/* <div className={styles.image}>
-          <Image src={cardData.image} alt="" height={200} width={200} />
-        </div> */}
+        <div className={styles.image}>
+          <Image
+            className={styles.cardimage}
+            src={cardData.image}
+            alt=""
+            height={200}
+            width={200}
+          />
+        </div>
       </motion.div>
     </motion.div>
   );
