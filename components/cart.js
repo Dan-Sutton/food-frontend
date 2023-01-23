@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useStateContext } from "../lib/context";
 import styles from "../styles/cart.module.css";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
+import { MdOutlineCancel } from "react-icons/md";
 import { motion } from "framer-motion";
 import getStripe from "../lib/getStripe";
 
@@ -85,9 +86,11 @@ const Cart = () => {
       >
         {cartItems.length < 1 && (
           <div>
-            <h2 className={styles.exit} onClick={() => setShowCart(!showCart)}>
-              x
-            </h2>
+            <MdOutlineCancel
+              className={styles.exit}
+              onClick={() => setShowCart(!showCart)}
+            />
+
             <h1>Your Cart is empty</h1>
           </div>
         )}

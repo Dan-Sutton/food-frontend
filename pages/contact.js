@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/contact.module.css";
 import Footer from "../components/footer";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -10,7 +11,12 @@ const Contact = () => {
         Get in contact now to secure bookings, or if you have any queries.
       </p>
 
-      <div className={styles.contactForm}>
+      <motion.div
+        className={styles.contactForm}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
         <input placeholder="Full name" />
         <input inputMode="email" placeholder="Email address" />
         <input inputMode="tel" placeholder="Contact number" />
@@ -19,7 +25,7 @@ const Contact = () => {
           inputMode="text"
           placeholder="Message"
         />
-      </div>
+      </motion.div>
       <Footer />
     </div>
   );
