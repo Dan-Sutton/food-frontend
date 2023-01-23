@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/burgerIcon.module.css";
 import BurgerMenu from "./bugerMenu";
 import { AnimatePresence } from "framer-motion";
+import icon from "../lib/gallery/hamburgerIcon.png";
 
 const BurgerIcon = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -10,11 +11,9 @@ const BurgerIcon = () => {
     <div className={styles.burgerIcon}>
       <Image
         className={styles.icon}
-        width={65}
-        height={65}
-        src={
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/2048px-Hamburger_icon.svg.png"
-        }
+        width={50}
+        height={50}
+        src={icon}
         onClick={() => setOpenMenu(!openMenu)}
       />
 
