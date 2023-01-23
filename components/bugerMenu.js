@@ -4,9 +4,14 @@ import { slide as Menu } from "react-burger-menu";
 import Link from "next/link";
 import styles from "../styles/burgermenu.module.css";
 import { motion } from "framer-motion";
-
+import { HiOutlineShoppingBag } from "react-icons/hi";
+import { useStateContext } from "../lib/context";
+import { AnimatePresence } from "framer-motion";
+import Cart from "./cart";
+import CartPage from "../pages/cartpage";
 
 const BurgerMenu = ({ openMenu, close }) => {
+  const { setShowCart, showCart, totalQuantities } = useStateContext();
   return (
     <motion.div
       className={styles.background}
@@ -42,7 +47,37 @@ const BurgerMenu = ({ openMenu, close }) => {
             stiffness: 100,
           },
         }}
-      ></motion.div>
+      >
+        <div className={styles.navbar}>
+          <div className={styles.navlist}>
+            <div className={styles.cartDiv}>
+              <Link href={"/cartpage"}>
+                <HiOutlineShoppingBag
+                  onClick={() => {
+                    close(!openMenu);
+                  }}
+                />
+              </Link>
+
+              {totalQuantities > 0 && (
+                <span className={styles.quantities}>{totalQuantities}</span>
+              )}
+            </div>
+            <Link href={"/"} onClick={() => close(!openMenu)}>
+              home
+            </Link>
+            <Link href={"/apothecary"} onClick={() => close(!openMenu)}>
+              apothecary
+            </Link>
+            <Link href={"/contact"} onClick={() => close(!openMenu)}>
+              contact
+            </Link>
+            <Link href={"/event"} onClick={() => close(!openMenu)}>
+              events
+            </Link>
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
   );
 };

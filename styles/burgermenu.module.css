@@ -1,15 +1,14 @@
 .burgercontainer {
-  background-color: aqua;
+  background-color: white;
   width: min(50vw, 400px);
   height: 100vh;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 4;
+  z-index: 1;
 }
 
 .menu {
-  background-color: aquamarine;
   position: absolute;
   top: 0;
   z-index: 2;
@@ -25,5 +24,19 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
-  z-index: 4;
+  z-index: 2;
+}
+
+.navlist {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 40px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+.cartIcon {
+  font-size: 40px;
 }

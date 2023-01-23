@@ -15,13 +15,9 @@ const Nav = () => {
     <div className={styles.navbar}>
       <div className={styles.navlist}>
         <Link href={"/"}>home</Link>
-        {/* <Link href={"/"}>about</Link> */}
         <Link href={"/apothecary"}>apothecary</Link>
         <Link href={"/contact"}>contact</Link>
-        {/* <Link href={"/book"}>book</Link> */}
         <Link href={"/event"}>events</Link>
-        {/* <Link href={"/gallery"}>gallery</Link> */}
-        {/* <User /> */}
         <div className={styles.cartDiv}>
           <HiOutlineShoppingBag
             className={styles.cartIcon}

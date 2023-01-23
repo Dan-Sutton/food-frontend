@@ -44,3 +44,19 @@
   width: auto;
   height: 20px;
 }
+
+@media (max-width: 1160px) {
+  .title {
+    font-size: 15px;
+  }
+
+  .titlediv {
+    width: 100vw;
+    background-color: white;
+    height: fit-content;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.04);
+  }
+  .navbar {
+    height: 0;
+  }
+}
