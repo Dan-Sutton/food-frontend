@@ -7,7 +7,7 @@
 }
 
 .shopcontent {
-  margin-top: 7%;
+  margin-top: max(7%, 70px);
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;

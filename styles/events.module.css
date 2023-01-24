@@ -1,5 +1,5 @@
 .events {
-  /* margin-top: 150px; */
+  margin-top: max(7%, 70px);
   display: flex;
   flex-direction: column;
   justify-content: center;
