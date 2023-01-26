@@ -10,6 +10,7 @@ const BurgerIcon = () => {
   return (
     <div className={styles.burgerIcon}>
       <Image
+        alt=""
         className={styles.icon}
         width={50}
         height={50}

@@ -98,8 +98,8 @@ export default function Home() {
             <div className={styles.alchemyQuote}>
               <h2>alchemy</h2>
               <p>
-                noun-'a seemingly magical process of transformation, creation,
-                or combination.'
+                noun-&#39;a seemingly magical process of transformation,
+                creation, or combination.&#39;
               </p>
             </div>
             <div className={styles.aboutContent}>
@@ -122,6 +122,7 @@ export default function Home() {
             </div>
           </div>
           <Image
+            alt=""
             className={styles.aboutImage}
             width={350}
             height={470}

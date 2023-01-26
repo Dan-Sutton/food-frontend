@@ -15,6 +15,7 @@ const Footer = () => {
 
         <div className={styles.socialicons}>
           <Image
+            alt="social icons"
             src={facebooklogo}
             width={50}
             height={50}
@@ -28,6 +29,7 @@ const Footer = () => {
             }
           />
           <Image
+            alt="instagramlogo"
             src={InstaLogo}
             width={50}
             height={50}

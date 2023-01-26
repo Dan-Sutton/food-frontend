@@ -5,6 +5,7 @@ import { EVENT_QUERY } from "../lib/query";
 import styles from "../styles/events.module.css";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
+import Image from "next/image";
 
 const Event = () => {
   const [results] = useQuery({ query: EVENT_QUERY });
@@ -85,7 +86,10 @@ const Event = () => {
             >
               <h3>{event.attributes.title}</h3>
 
-              <img src={event.attributes.image.data[0].attributes.url}></img>
+              <Image
+                src={event.attributes.image.data[0].attributes.url}
+                alt=""
+              ></Image>
               <p>{formatDate(event.attributes.date)}</p>
               <p>{event.attributes.description}</p>
               <Link
