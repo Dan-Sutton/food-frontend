@@ -105,12 +105,19 @@ export default function Home() {
             <div className={styles.aboutContent}>
               <h2 id="#about">ABOUT</h2>
               <p>
-                STUFF ABOUT MATT AND HIS APPROACH Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                From walking through his first professional kitchen doors as an
+                early teen, to over 15 years later Matthew has managed popular
+                high-end independent eateries and British wine estates. Working
+                with chefs from around the world he has acquired an excellent
+                knowledge of worldly cuisines and has developed a passion for
+                delivering the highest quality local ingredients with great
+                depth in flavour and stunning visuals. He gained popularity with
+                his passion for innovative flavour combinations and off-grid
+                cooking style with repeated appearances on the BBC and in the
+                good food guide. <br /> <br />
+                Matthew now owns a small eatery in Bridgnorth, where he hosts
+                immersive fine dining events and an innovative street food
+                pop-up shop in Wolverhampton.
               </p>
             </div>
           </div>
