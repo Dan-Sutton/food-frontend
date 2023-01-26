@@ -1,14 +1,9 @@
-import React, { useState } from "react";
-import Nav from "./nav";
-import { slide as Menu } from "react-burger-menu";
+import React from "react";
 import Link from "next/link";
 import styles from "../styles/burgermenu.module.css";
 import { motion } from "framer-motion";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { useStateContext } from "../lib/context";
-import { AnimatePresence } from "framer-motion";
-import Cart from "./cart";
-import CartPage from "../pages/cartpage";
 
 const BurgerMenu = ({ openMenu, close }) => {
   const { setShowCart, showCart, totalQuantities } = useStateContext();
