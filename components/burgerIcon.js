@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/burgerIcon.module.css";
 import BurgerMenu from "./bugerMenu";
 import { AnimatePresence } from "framer-motion";
-import icon from "../lib/gallery/hamburgerIcon.png";
+import icon from "../lib/gallery/hamburgericon.png";
 
 const BurgerIcon = () => {
   const [openMenu, setOpenMenu] = useState(false);
