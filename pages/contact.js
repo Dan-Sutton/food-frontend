@@ -8,7 +8,8 @@ const Contact = () => {
     <div className={styles.contactPage}>
       <h2 className={styles.title}>Contact</h2>
       <p className={styles.subheading}>
-        Get in contact now to secure bookings, or if you have any queries.
+        Get in contact now to secure bookings, or if you have any queries. Use
+        the form below or call 07375 356314.
       </p>
 
       <motion.div

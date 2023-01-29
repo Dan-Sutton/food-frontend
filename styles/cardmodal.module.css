@@ -27,6 +27,17 @@
   border-radius: 2px;
 }
 
+.link {
+  background-color: #3c3c3c;
+  color: white;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 2px;
+  font-family: var(--spaceMono-font);
+  font-weight: 500;
+  font-size: 15px;
+}
+
 .content h1 {
   text-align: center;
 }
@@ -45,6 +56,9 @@
   .content {
     flex-wrap: wrap;
     gap: 10px;
+  }
+  .text {
+    align-items: center;
   }
 }
 

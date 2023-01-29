@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/cardmodal.module.css";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const CardModal = ({ showCardModal, setShowCardModal, cardData }) => {
   console.log(cardData);
@@ -24,6 +25,9 @@ const CardModal = ({ showCardModal, setShowCardModal, cardData }) => {
         <div className={styles.text}>
           <h1>{cardData.title.replace("-", "")}</h1>
           <p>{cardData.content}</p>
+          <Link href={"/contact"} className={styles.link}>
+            BOOK NOW
+          </Link>
         </div>
         <div className={styles.image}>
           <Image
