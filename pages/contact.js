@@ -17,13 +17,13 @@ const Contact = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
       >
-        <input placeholder="Full name" />
-        <input inputMode="email" placeholder="Email address" />
-        <input inputMode="tel" placeholder="Contact number" />
+        <input placeholder="FULL NAME" />
+        <input inputMode="email" placeholder="EMAIL ADDRESS" />
+        <input inputMode="tel" placeholder="CONTACT NUMBER" />
         <textarea
           className={styles.message}
           inputMode="text"
-          placeholder="Message"
+          placeholder="MESSAGE"
         />
       </motion.div>
       <Footer />

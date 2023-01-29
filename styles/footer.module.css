@@ -16,6 +16,7 @@
   font-weight: 400;
   margin-bottom: -6%;
   margin-left: 2%;
+  font-family: var(--spaceMono-font);
 }
 
 .contactInfo,

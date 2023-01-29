@@ -91,7 +91,7 @@ const Cart = () => {
               onClick={() => setShowCart(!showCart)}
             />
 
-            <h1>Your Cart is empty</h1>
+            <h1>YOUR CART IS EMPTY</h1>
           </div>
         )}
         <motion.div variants={cards} initial="hidden" animate="show" layout>

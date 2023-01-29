@@ -68,7 +68,7 @@ const Event = () => {
         {events.length === 0 ? (
           <h1 className={styles.noevents}>No events at the moment!</h1>
         ) : (
-          <h1>Events</h1>
+          <h1>EVENTS</h1>
         )}
         <motion.div
           className={styles.eventContainer}
@@ -87,6 +87,8 @@ const Event = () => {
               <h3>{event.attributes.title}</h3>
 
               <Image
+                width={500}
+                height={500}
                 src={event.attributes.image.data[0].attributes.url}
                 alt=""
               ></Image>
