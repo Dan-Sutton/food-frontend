@@ -30,4 +30,13 @@ a {
     background: rgb(249, 249, 249);
     color: black;
   }
+
+  h1,
+  h2 {
+    font-family: var(--mulish-font);
+  }
+
+  p {
+    font-family: var(--spaceMono-font);
+  }
 }
