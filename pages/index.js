@@ -55,7 +55,7 @@ export default function Home() {
         />
       ) : null}
       <Head>
-        <title>the Food Alchemist</title>
+        <title>The Food Alchemist</title>
         <meta name="Fine dining and street food specialist" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
