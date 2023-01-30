@@ -65,7 +65,7 @@ const Success = ({ order }) => {
 
         <button
           className={styles.successbutton}
-          onClick={() => route.push("/shop")}
+          onClick={() => route.push("/apothecary")}
         >
           Continue shopping
         </button>
