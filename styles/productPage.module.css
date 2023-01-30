@@ -13,7 +13,7 @@
   /* border: 2px solid black; */
   border-radius: 6px;
   padding: 30px;
-  width: 60vw;
+  width: min(80vw, 900px);
 }
 
 .descColumn {
@@ -44,4 +44,18 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 904px) {
+  .productPage {
+  }
+
+  .productPage h3 {
+    text-align: center;
+  }
+
+  .productContent {
+    flex-wrap: wrap;
+    text-align: justify;
+  }
 }
