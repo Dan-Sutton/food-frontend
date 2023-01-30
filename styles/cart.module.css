@@ -57,7 +57,7 @@
 
 .purchase {
   width: 100%;
-  background-color: red;
+  background-color: var(--red);
   border: none;
   height: 30px;
   border-radius: 5px;
