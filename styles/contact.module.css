@@ -13,6 +13,7 @@
 .subheading {
   width: min(430px, 80vw);
   text-align: center;
+  font-family: var(--spaceMono-font);
 }
 
 .contactForm {
