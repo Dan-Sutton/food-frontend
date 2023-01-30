@@ -148,14 +148,15 @@
   height: 100%;
 }
 
-@media (max-width: 904px) {
+@media (max-width: 1205px) {
   .alchemyQuote,
   .aboutContent {
-    width: 80vw;
+    width: 100%;
   }
 
   .alchemyQuote {
     margin-top: -100px;
+    margin-left: 0;
   }
   .alchemyQuote h2 {
     margin-bottom: 60px;
@@ -163,5 +164,15 @@
 
   .aboutImage {
     margin-top: 10px;
+  }
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+  }
+  .aboutColumn {
+    width: 100%;
   }
 }
