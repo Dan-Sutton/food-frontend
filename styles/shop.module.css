@@ -28,3 +28,9 @@
   gap: 30px;
   flex-wrap: wrap;
 }
+
+@media (max-width: 1300px) {
+  .shop {
+    margin-top: 5vw;
+  }
+}

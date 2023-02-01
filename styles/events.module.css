@@ -59,3 +59,9 @@
 .noevents {
   height: 110px;
 }
+
+@media (max-width: 1300px) {
+  .events {
+    margin-top: 15vw;
+  }
+}
