@@ -31,8 +31,13 @@
   /* background-color: grey; */
   border-style: none;
   border-radius: 2px;
-  color: black;
+  color: white;
   font-family: var(--spaceMono-font);
+}
+
+.submit {
+  margin-top: -50px;
+  background-color: var(--red);
 }
 
 .contactForm .message {
