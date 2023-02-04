@@ -105,19 +105,24 @@ export default function Home() {
             <div className={styles.aboutContent}>
               <h2 id="#about">ABOUT</h2>
               <p>
-                From walking through his first professional kitchen doors as an
-                early teen, to over 15 years later Matthew has managed popular
-                high-end independent eateries and British wine estates. Working
-                with chefs from around the world he has acquired an excellent
-                knowledge of worldly cuisines and has developed a passion for
-                delivering the highest quality local ingredients with great
-                depth in flavour and stunning visuals. He gained popularity with
-                his passion for innovative flavour combinations and off-grid
-                cooking style with repeated appearances on the BBC and in the
-                good food guide. <br /> <br />
-                Matthew now owns a small eatery in Bridgnorth, where he hosts
-                immersive fine dining events and an innovative street food
-                pop-up shop in Wolverhampton.
+                ​​From walking through his first professional kitchen doors as
+                an early teen, to over 15 years later Matthew has managed
+                kitchens in popular high-end independent eateries and British
+                wine estates across the Midlands. Working with chefs from around
+                the world he acquired a wealth of knowledge in worldly cuisines
+                and developed a passion for working food alchemy with the
+                highest quality local ingredients. With mouth-watering
+                presentation and innovative cooking styles, he gained popularity
+                with his passion for unique flavour combinations and off-grid
+                cooking with appearances on the BBC and The Good Food Guide.
+                <br />
+                <br />
+                Follow us on social media at:
+                <br />
+                <br />
+                Instagram: @the_food_alchemist_
+                <br />
+                Facebook: The Food Alchemist
               </p>
             </div>
           </div>
