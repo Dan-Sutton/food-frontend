@@ -16,7 +16,11 @@ const Shop = () => {
   return (
     <div className={styles.shop}>
       <div className={styles.shopcontent}>
-        <h1>LATEST PRODUCTS</h1>
+        <h1>
+          {products.length == 0
+            ? "NO PRODUCTS AT THE MOMENT!"
+            : "LATEST PRODUCTS"}
+        </h1>
         <motion.div
           className={styles.products}
           initial={{ opacity: 0, y: 20 }}
