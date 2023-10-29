@@ -1,6 +1,8 @@
 :root {
   --background-color: #f9f9f9;
-  --red: rgb(251, 93, 75);
+  --black: #2b2b2b;
+  --white: #fafafa;
+  --red: #db4a2b;
 }
 
 html,
@@ -28,12 +30,12 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
-    color: black;
+    color: #2b2b2b;
   }
   body {
     color: white;
     background: rgb(249, 249, 249);
-    color: black;
+    color: #2b2b2b;
   }
 
   h1,

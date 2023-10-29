@@ -10,50 +10,17 @@ import { Carousel } from "react-responsive-carousel";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
 import { servicesData } from "../lib/seedData/servicesData";
-import matt from "../lib/gallery/matt.jpeg";
+import matt from "../lib/gallery/matt.png";
+import HomeButton from "../components/homeButton";
+import img1 from "../public/images/img1.jpg";
+import img2 from "../public/images/img2.jpg";
+import img3 from "../public/images/img3.jpg";
+import img4 from "../public/images/img4.jpg";
+import img5 from "../public/images/img5.jpg";
 
 export default function Home() {
-  const [showCardModal, setShowCardModal] = useState(false);
-  const [cardData, setCardData] = useState();
-
-  function handleShowCardModal(index) {
-    setCardData(servicesData[index]);
-    setShowCardModal(!showCardModal);
-  }
-
-  const card = {
-    hidden: { opacity: 0, scale: 0.8 },
-    show: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 1.5,
-        type: "spring",
-        bounce: 0.2,
-      },
-    },
-  };
-
-  const cards = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.1,
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
   return (
     <div>
-      {showCardModal ? (
-        <CardModal
-          cardData={cardData}
-          showCardModal={showCardModal}
-          setShowCardModal={setShowCardModal}
-        />
-      ) : null}
       <Head>
         <title>The Food Alchemist</title>
         <meta name="Fine dining and street food specialist" content="" />
@@ -66,74 +33,56 @@ export default function Home() {
         transition={{ duration: 1, delay: 0.2 }}
       >
         <div className={styles.homecontent}></div>
-        {/* <h2 className={styles.subheading}>WHAT WE DO</h2> */}
 
-        <motion.div
-          className={styles.cards}
-          variants={cards}
-          initial="hidden"
-          animate="show"
-          layout
-        >
-          {servicesData.map((e, index) => (
-            <motion.div
-              layout
-              variants={card}
-              key={e.slug}
-              // className={styles.card}
-            >
-              <Card
-                title={e.title}
-                content={e.content}
-                image={e.image}
-                handleShowCardModal={handleShowCardModal}
-                index={index}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
-
-        <div className={styles.about}>
-          <div className={styles.aboutColumn}>
-            <div className={styles.alchemyQuote}>
-              <h2>alchemy</h2>
-              <p>
-                noun-&#39;a seemingly magical process of transformation,
-                creation, or combination.&#39;
-              </p>
+        <section className={styles.about}>
+          <div className={styles.aboutContent}>
+            <div className={styles.titles}>
+              <h2 id="#about" className={styles.title}>
+                THE
+              </h2>
+              <h2 className={styles.title}>FOOD</h2>
+              <h2 className={styles.title}>ALCHEMIST</h2>
+              <div>
+                <p className={styles.subheading}>BESPOKE DINING EVENTS</p>
+              </div>
+              <div className={styles.buttonLinks}>
+                <HomeButton text={"PUBLIC EVENTS"} />
+                <HomeButton text={"PRIVATE HIRE"} />
+                <HomeButton text={"BRITISH CRYSTALS"} />
+              </div>
             </div>
-            <div className={styles.aboutContent}>
-              <h2 id="#about">ABOUT</h2>
-              <p>
-                ​​From walking through his first professional kitchen doors as
-                an early teen, to over 15 years later Matthew has managed
-                kitchens in popular high-end independent eateries and British
-                wine estates across the Midlands. Working with chefs from around
-                the world he acquired a wealth of knowledge in worldly cuisines
-                and developed a passion for working food alchemy with the
-                highest quality local ingredients. With mouth-watering
-                presentation and innovative cooking styles, he gained popularity
-                with his passion for unique flavour combinations and off-grid
-                cooking with appearances on the BBC and The Good Food Guide.
-                <br />
-                <br />
-                Follow us on social media at:
-                <br />
-                <br />
-                Instagram: @the_food_alchemist_
-                <br />
-                Facebook: The Food Alchemist
-              </p>
-            </div>
+            <Image
+              alt=""
+              className={styles.aboutImage}
+              width={350}
+              height={470}
+              src={matt}
+            />
           </div>
-          <Image
-            alt=""
-            className={styles.aboutImage}
-            width={350}
-            height={470}
-            src={matt}
-          />
-        </div>
+        </section>
+
+        <section className={styles.missionSection}>
+          <h2>THE MISSION</h2>
+          <p>
+            Alchemy is ‘seemingly magical process of transformation, creation,
+            or combination’. With this in mind, here at{" "}
+            <b>THE FOOD ALCHEMIST</b> we strive to provide unforgettable
+            experiences.
+          </p>
+
+          <div className={styles.missionImages}>
+            <Image src={img1} className={styles.missionImage} />
+            <Image src={img2} className={styles.missionImage} />
+            <Image src={img3} className={styles.missionImage} />
+            <Image src={img4} className={styles.missionImage} />
+            <Image src={img5} className={styles.missionImage} />
+            <Image src={img1} className={styles.missionImage} />
+            <Image src={img2} className={styles.missionImage} />
+            <Image src={img3} className={styles.missionImage} />
+            <Image src={img4} className={styles.missionImage} />
+            <Image src={img5} className={styles.missionImage} />
+          </div>
+        </section>
         <Footer />
       </motion.main>
     </div>

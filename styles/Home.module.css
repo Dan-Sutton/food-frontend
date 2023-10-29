@@ -14,41 +14,100 @@
   flex-direction: column;
 }
 
-.coverImage {
-  width: 90vw;
-  height: auto;
+.subheading {
+  display: flex;
+  width: fit-content;
+  font-family: "roboto";
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-top: -37px;
 }
 
-.coverImage img {
+.about {
+  top: 60px;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  margin: -20px 10vw 60px 10vw;
+  flex-wrap: wrap;
+  background-color: var(--white);
+  z-index: 0;
+}
+
+.aboutContent {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.aboutImage {
   object-fit: cover;
-  height: 500px;
+  width: 390px;
+  height: 100%;
+  margin-top: 10px;
 }
 
-.carouselContainer {
-  height: 500px;
+.titles {
+  width: 50%;
 }
 
-/* .cardsRow {
-  display: flex;
-  width: 90vw;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 10%;
+.title {
+  font-family: "youngest";
+  font-size: 100px;
+  font-weight: 200;
+  line-height: 10px;
+  width: fit-content;
+}
 
-  height: 350px;
-  margin-bottom: 20px;
-} */
-
-.cards {
-  padding-top: min(35%, 40px);
-  width: min(1100px, 80vw);
+.buttonLinks {
+  margin-top: 40px;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 100px;
-  height: fit-content;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.missionSection {
+  background-color: var(--black);
+  width: 100vw;
+  height: 700px;
+  z-index: 1;
+  color: var(--white);
+  padding: 0 10vw;
+  position: relative;
+}
+
+.missionSection h2 {
+  margin-top: 60px;
+  font-family: var(--montserrat);
+  font-style: italic;
+  letter-spacing: 3px;
+  font-size: 30px;
+}
+
+.missionSection p {
+  font-family: var(--montserrat);
+  font-size: 20px;
+  padding: 0 3%;
+  font-weight: 200;
+  text-align: justify;
+  line-height: 30px;
+  letter-spacing: 3px;
+  margin-bottom: 60px;
+}
+
+.missionImages {
+  display: flex;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  overflow: scroll;
+}
+.missionImage {
+  height: auto;
+  width: 25vw;
+  aspect-ratio: 1;
+  background-color: grey;
 }
 
 .reviewCard {
@@ -82,50 +141,6 @@
   text-align: center;
 }
 
-.about {
-  /* margin-top: 500px; */
-  display: flex;
-  justify-content: space-between;
-  width: 72vw;
-  flex-wrap: wrap;
-}
-
-.aboutColumn {
-  width: 55%;
-}
-
-.alchemyQuote {
-  margin-left: 20%;
-}
-
-.alchemyQuote h2 {
-  font-size: 50px;
-}
-
-.alchemyQuote p {
-  font-size: 27px;
-  margin-top: -8%;
-}
-
-.aboutContent {
-  margin-top: 10%;
-}
-.aboutContent p {
-  font-size: 19px;
-}
-
-.aboutContent h2 {
-  margin-left: 5%;
-  font-size: 30px;
-}
-
-.aboutImage {
-  object-fit: cover;
-  width: 390px;
-  height: 100%;
-  margin-top: 120px;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -149,21 +164,6 @@
 }
 
 @media (max-width: 1205px) {
-  .alchemyQuote,
-  .aboutContent {
-    width: 100%;
-  }
-
-  .alchemyQuote {
-    margin-top: -100px;
-    margin-left: 0;
-    width: fit-content;
-    text-align: start;
-  }
-  .alchemyQuote h2 {
-    margin-bottom: 60px;
-  }
-
   .aboutImage {
     margin-top: 10px;
     width: 80%;

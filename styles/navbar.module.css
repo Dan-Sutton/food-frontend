@@ -1,50 +1,33 @@
 .navbar {
   width: 100vw;
-  height: 100px;
+  height: 60px;
   position: fixed;
-  background-color: white;
-  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.04);
-  top: 0;
+  background-color: var(--white);
   z-index: 2;
-
-  /* background-color: white; */
 }
 
 .titlediv {
-  position: absolute;
-  width: fit-content;
+  height: 100%;
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
   align-items: center;
-  height: fit-content;
-  width: 100%;
-  margin-top: -20px;
+  padding: 0 20px;
+  position: relative;
 }
 
 .title {
-  color: black;
-  width: 100%;
+  color: var(--black);
   display: flex;
-  justify-content: center;
-  font-size: 30px;
-  font-weight: 400;
-  margin-bottom: 23px;
+  font-size: 25px;
+  font-weight: 200;
+  font-family: "younger";
 }
 
-.logocontainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: -35px;
-  height: 45px;
-  width: 350px;
-}
-
-.logo {
-  width: auto;
-  height: 25px;
+.navItems {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  right: 0;
 }
 
 @media (max-width: 1300px) {
@@ -56,9 +39,8 @@
 
   .titlediv {
     width: 100vw;
-    background-color: white;
+    background-color: var(--white);
     height: fit-content;
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.04);
   }
   .navbar {
     height: 0;

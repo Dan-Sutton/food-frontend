@@ -60,6 +60,22 @@
   height: 110px;
 }
 
+.eventPage {
+  width: 100vw;
+  background-color: var(--black);
+  height: 100vh;
+}
+
+.soon {
+  color: var(--white);
+  position: absolute;
+  font-size: 100px;
+  top: 40%;
+  width: 100vw;
+  text-align: center;
+  font-family: "montserrat";
+}
+
 @media (max-width: 1300px) {
   .events {
     margin-top: 15vw;

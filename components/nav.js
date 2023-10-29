@@ -14,10 +14,10 @@ const Nav = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.navlist}>
-        <Link href={"/"}>home</Link>
-        <Link href={"/apothecary"}>apothecary</Link>
-        <Link href={"/contact"}>contact</Link>
-        <Link href={"/event"}>events</Link>
+        <Link href={"/"}>HOME</Link>
+        <Link href={"/apothecary"}>BRITISH CRYSTALS</Link>
+        <Link href={"/contact"}>CONTACT</Link>
+        <Link href={"/event"}>UPCOMING EVENTS</Link>
         <div className={styles.cartDiv}>
           <HiOutlineShoppingBag
             className={styles.cartIcon}
